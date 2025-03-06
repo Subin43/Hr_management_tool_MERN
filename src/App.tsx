@@ -13,6 +13,8 @@ import Documents from "./pages/documents"
 import People from "./pages/people"
 import Request from "./pages/requesthub/request"
 import { useEffect, useState } from "react"
+import PersonalInfo from "./profile/personalinfo"
+import ForgotPassword from "./auth/forgotpassword"
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
   const DocumentComponent = GlobalComponent(Documents,setTheme)
   const PeopleComponent = GlobalComponent(People,setTheme);
   const RequestHubComponent = GlobalComponent(Request,setTheme);
+  const ProfileComponent = GlobalComponent(PersonalInfo, setTheme) 
 
 
   useEffect(() => {
@@ -52,6 +55,8 @@ function App() {
         <Route path="/tasks" element={<TaskComponent/>} />
         <Route path="/documents" element={<DocumentComponent/>} />
         <Route path="/tasks/addtask" element={<AddTask/>} />
+        <Route path="/profile" element={<ProfileComponent />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
     </>
   )

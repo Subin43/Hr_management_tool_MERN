@@ -71,7 +71,7 @@ const Login = () => {
             <button className="text-blue-500 hover:underline" onClick={() => navigate("/forgot-password")}>Forgot Password</button>
             </div>
             
-            <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-all mb-4"
+            <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-all mb-4"
             disabled={isSubmitting}>
               Login
             </button>
